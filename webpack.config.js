@@ -5,7 +5,7 @@ module.exports = (env, argv) => {
   const IS_DEVELOPMENT = argv.mode === 'development'
 
   return {
-    entry: ['@babel/polyfill', './src/js/app.js'],
+    entry: './src/js/app.js',
     output: {
       filename: 'js/bundle.js',
       path: path.join(__dirname, 'dist')
