@@ -15,7 +15,7 @@ export default () => {
   addEvent({
     elem: elem,
     ev: 'click',
-    func: async (e) => {
+    func: async e => {
       try {
         const el = e.currentTarget
         const { confirmation } = await import('@modules/confirmation')

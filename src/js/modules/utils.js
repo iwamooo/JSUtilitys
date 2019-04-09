@@ -4,7 +4,7 @@
  * @description DOMツリー読み込み完了後指定の関数を実行する
  * @param {function} func [実行関数]
  */
-export const mounted = (func) => {
+export const mounted = func => {
   if (document.readyState !== 'loading') {
     func()
   } else {
@@ -17,7 +17,7 @@ export const mounted = (func) => {
  * @param {String} className [class名]
  * @returns {Object} 指定class名のDom参照
  */
-export const el = (className) => {
+export const el = className => {
   const all = document.querySelectorAll(`.${className}`)
 
   return all.length > 1 ? all : all[0]

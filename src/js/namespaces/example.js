@@ -3,14 +3,14 @@
 import { el, addEvent, closest } from '@modules/utils'
 
 const example = {
-  func_1 (el) {
+  func_1(el) {
     const parent = closest(el, 'Wrapper')
 
     this.func_2(parent)
   },
 
   /* eslint no-console: 0 */
-  func_2 (el) {
+  func_2(el) {
     console.log(el)
   }
 }
@@ -28,7 +28,7 @@ export default () => {
   addEvent({
     elem: elem,
     ev: 'click',
-    func: (e) => {
+    func: e => {
       example.func_1(e.currentTarget)
     }
   })
