@@ -13,6 +13,7 @@ module.exports = (env, argv) => {
     resolve: {
       extensions: ['.js'],
       alias: {
+        '@utilities': path.resolve(__dirname, './src/js/utilities'),
         '@modules': path.resolve(__dirname, './src/js/modules'),
         '@namespaces': path.resolve(__dirname, './src/js/namespaces')
       }

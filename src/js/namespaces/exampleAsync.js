@@ -1,19 +1,20 @@
 'use strict'
 
-import { el, addEvent } from '@modules/utils'
+import { elem } from '@utilities'
+import { addEvent } from '@utilities/event'
 
 /**
  * @description コンソール表示
  */
 export default () => {
-  const elem = el('js-ExampleAsync')
+  const el = elem('js-ExampleAsync')
 
-  if (!elem) {
+  if (!el) {
     return
   }
 
   addEvent({
-    elem: elem,
+    el: el,
     ev: 'click',
     func: async e => {
       try {

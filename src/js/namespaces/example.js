@@ -1,10 +1,14 @@
 'use strict'
 
-import { el, addEvent, closest } from '@modules/utils'
+import { elem, closest } from '@utilities'
+import { addEvent } from '@utilities/event'
 
 const example = {
   func_1(el) {
-    const parent = closest(el, 'Wrapper')
+    const parent = closest({
+      el: el,
+      className: 'Wrapper'
+    })
 
     this.func_2(parent)
   },
@@ -19,14 +23,14 @@ const example = {
  * @description currentTargetをコンソール表示する
  */
 export default () => {
-  const elem = el('js-Example')
+  const el = elem('js-Example')
 
-  if (!elem) {
+  if (!el) {
     return
   }
 
   addEvent({
-    elem: elem,
+    el: el,
     ev: 'click',
     func: e => {
       example.func_1(e.currentTarget)
