@@ -1,1 +1,1 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{284:function(n,o,c){"use strict";function i(n){console.log(n)}c.r(o),c.d(o,"confirmation",function(){return i})}}]);
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{284:function(n,o,c){"use strict";c.r(o),c.d(o,"confirmation",function(){return i});var i=function(n){console.log(n)}}}]);
